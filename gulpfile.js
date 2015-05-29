@@ -36,6 +36,7 @@ gulp.task('buildJS', function () {
 
     bundler.bundle()
         .pipe(source('app.js'))
+        .pipe(plumber())
         .pipe(gulp.dest('public'));
 
 });
